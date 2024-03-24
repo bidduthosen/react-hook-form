@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const OnChangeForm = () => {
 
-    const [name, setName] = useState(null);
+    const [name, setName] = useState('biddut');
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
     const [error, setError] = useState('');
@@ -32,7 +32,7 @@ const OnChangeForm = () => {
     }
     return (
         <form onSubmit={handleForm} className='flex flex-col gap-3'>
-            <input onChange={handleNameChange} type="text" name='name' placeholder="Your Name" className="input input-bordered w-full max-w-xs" />
+            <input value={name} onChange={handleNameChange} type="text" name='name' placeholder="Your Name" className="input input-bordered w-full max-w-xs" />
             <input onChange={handleEmailChange} type="email" name='email' placeholder="Your email" className="input input-bordered w-full max-w-xs" />
             <input onChange={handlePasswordChange} type="password" placeholder='Your Password' name="password" id="" className="input input-bordered w-full max-w-xs" />
             <button type='submit' className="btn btn-success">Success</button>
